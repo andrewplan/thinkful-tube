@@ -1,0 +1,46 @@
+body {
+    background-image: url("https://hd.unsplash.com/photo-1429962714451-bb934ecdc4ec");
+    background-size: cover;
+}
+
+.content {
+    width: 70em;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: .1em .05em black;
+}
+
+#search-results {
+    width: 70em;
+    display: inline-flex;
+}
+
+.thumbnails {
+    height: 20em;
+    width: 33%;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+#search-term {
+    margin-left: 3.7em;
+    margin-bottom: 2em;
+    padding-left: 12em;
+}
+
+#label {
+    color: white;
+}
+
+#more-songs {
+    margin-left: 10em;
+}
+
+#more-songs-button {
+    margin-top: 2em;
+    margin-left: 20.5em;
+}
