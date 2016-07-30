@@ -1,8 +1,13 @@
+//grab URLs of high-quality thumbnails from each video returned
 function showResults(results) {
     var html = "";
     $.each(results, function(index, value){
-        html += "<p>" + value.Title + "</p>";
-        console.log(value.Title);
+        var theVideoIdenti = value.id.videoID;
+        var thumbnailURL = value.snippet.thumbnails.high.url;
+        console.log(thumbnailURL);
+        console.log(theVideoIdenti);
+        alert(theVideoIdenti);
+        html += "<img src=\'" + thumbnailURL + "\'>";
     });
     $("#search-results").html(html);
 }
@@ -10,25 +15,26 @@ function showResults(results) {
 //get JSON from the YouTube API based on user search term
 function getRequest(searchTerm) {
     var params = {
-        s: searchTerm,
-        r: 'json'
+        part: 'snippet',
+        key: "AIzaSyAekQLJN8I67yPvq_8hFZ68nfGlUE2lPSM",
+        q: searchTerm,
+        order: 'viewCount'
     };
-    url = 'http://www.omdbapi.com';
+    url = 'https://www.googleapis.com/youtube/v3/search';
     
     $.getJSON(url, params, function(data){
-      showResults(data.Search);
+      var userResults = data.items;
+      showResults(userResults);
+      console.log(userResults);
     });
-    /* $.getJSON("http://www.omdbapi.com/?s=" + searchTerm + "&r=json", function (data) {
-      showResults(data.Search);
-    }); */
 }
 
 $(function(){
-    //asks for user search term
+    //asks for user search term(s)
     $("#search-term").submit(function(event) {
         event.preventDefault();
-        var myquery = $("#query").val();
-        getRequest(myquery);
+        var myQuery = $("#query").val();
+        getRequest(myQuery);
     });
 })
 

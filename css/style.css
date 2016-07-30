@@ -16,14 +16,14 @@ h1 {
 
 #search-results {
     width: 70em;
-    display: inline-flex;
+    display: block;
 }
 
-.thumbnails {
+img {
     height: 20em;
     width: 33%;
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 #search-term {
