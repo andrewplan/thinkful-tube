@@ -10,15 +10,20 @@
         <section class="content">
             <h1>Watch the most popular videos of your favorite songs!</h1>
             <form id="search-term">
-                <label for="query-input" id="label">Search by artist/band and song title:</label>
+                <label for="query-input" id="label">Type in song title followed by artist/band name:</label>
                 <input type="text" name="query" id="query">
                 <input type="submit" id="submit-query" value="I want my YouTube!">
             </form>
             <div id="search-results"> 
             </div>
-            <form id="more-songs">
-                <input type="submit" id="more-songs-button" value="Gimme more songs" onclick="">
-            </form>
+            <div class="navigation">
+                <form id="more-songs">
+                    <input type="submit" id="more-songs-button" value="Gimme more songs" onclick="">
+                </form>
+                <form id="previous-songs">
+                    <input type="submit" id="previous-songs-button" value="Show me the previous songs" onclick="">
+                </form>
+            </div>
         </section>
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/app.js"></script>

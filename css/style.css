@@ -1,5 +1,6 @@
 body {
-    background-image: url("https://hd.unsplash.com/photo-1429962714451-bb934ecdc4ec");
+    /* background-image: url("https://hd.unsplash.com/photo-1429962714451-bb934ecdc4ec"); */
+    background-color: slategrey;
     background-size: cover;
 }
 
@@ -11,7 +12,7 @@ body {
 h1 {
     text-align: center;
     color: white;
-    text-shadow: .1em .05em black;
+    text-shadow: .05em .05em black;
 }
 
 #search-results {
@@ -20,7 +21,7 @@ h1 {
 }
 
 img {
-    height: 20em;
+    height: 17em;
     width: 33%;
     display: inline-block;
     border: 1px solid white;
@@ -34,13 +35,22 @@ img {
 
 #label {
     color: white;
+    text-shadow: .1em .05em black;
 }
 
-#more-songs {
-    margin-left: 10em;
+#more-songs, #previous-songs {
+    width: 10em; 
+    margin-top: 1em;
+    margin-bottom: .5em;
+    margin-left: 28.5em;
+    display: none;
 }
 
-#more-songs-button {
-    margin-top: 2em;
-    margin-left: 20.5em;
+#more-songs-button, #previous-songs-button {
+    width: 14em;
+    text-align: center;
+}
+
+.navigation {
+    margin-bottom: 5em;
 }
