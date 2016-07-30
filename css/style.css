@@ -38,19 +38,45 @@ img {
     text-shadow: .1em .05em black;
 }
 
+#submit-query {
+    width: 10em;
+    text-align: center;
+}
+
 #more-songs, #previous-songs {
     width: 10em; 
     margin-top: 1em;
     margin-bottom: .5em;
-    margin-left: 28.5em;
+    margin-left: 27.8em;
     display: none;
 }
 
 #more-songs-button, #previous-songs-button {
-    width: 14em;
+    width: 14.5em;
     text-align: center;
 }
 
 .navigation {
     margin-bottom: 5em;
+}
+
+#lightBoxBg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+    display: none;
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+}
+
+#lightBox {
+    position: absolute;
+    top: 10em;
+    left: 27em;
+    width: 40em;
+    height: 22.5em;
+    display: none;
+    border: 1px solid white;
 }
